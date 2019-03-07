@@ -12,10 +12,10 @@ public class LoadAssets: MonoBehaviour
 
     public IEnumerator Start()
     {
-    	uiManager = GameObject.Find("UIManager MR").GetComponent<UIManager>();
+    	uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     	// wait ReadManifest finish and update the count
         yield return uiManager.count;
-        //myCanvas = GameObject.Find("Menu_Canvas");
+        myCanvas = GameObject.Find("Menu_Canvas");
         StartCoroutine(DownloadModel());
     }
 
@@ -29,7 +29,7 @@ public class LoadAssets: MonoBehaviour
         yield return www;
         if(!string.IsNullOrEmpty(www.error))
         {
-            Debug.Log("There was a problem loading asset bundles.");
+            Debug.LogError("There was a problem loading asset bundles.");
             yield return null;
         }
         AssetBundle assetBundle = www.assetBundle;
@@ -42,8 +42,10 @@ public class LoadAssets: MonoBehaviour
         }
         */
         // between 0 ~ (count-1)
+        yield return new WaitForSeconds(0.1f);
         int random_number = Mathf.RoundToInt(Random.value * (uiManager.count - 1));
         // copy and set
+        Debug.Log(random_number);
         GameObject molecule = Instantiate(assetBundle.LoadAsset(UIManager.moleculeNames[random_number] + ".fbx")) as GameObject;
         Vector3 size = new Vector3(5f, 5f, 5f);
         // scale : 4

@@ -19,9 +19,9 @@ public class Swipe_Handler : MonoBehaviour {
 		array = GameObject.FindGameObjectsWithTag("edmc");
 		isosurfaces = new Queue<Renderer>();
 		// The touch position is given as a Vector2 where X and Y range from 0 to 1. (0, 0) is the top left of the touchpad and (1, 1) is the bottom right of the touchpad
-		if(GvrControllerInput.IsTouching){
-			previous_scale = GvrControllerInput.TouchPos;
-		}
+		//if(GvrControllerInput.IsTouching){
+		//	previous_scale = GvrControllerInput.TouchPos;
+		//}
 	}
 	
 	// Update is called once per frame
@@ -42,7 +42,7 @@ public class Swipe_Handler : MonoBehaviour {
 				isosurfaces.Enqueue(i);
 		}
 		bool beingScale = objMessage.loadScale();
-		// click AppButton to toggle beingScale
+		/* click AppButton to toggle beingScale
 		if(GvrControllerInput.AppButtonDown){
 			if(beingScale){
 				objMessage.disable_scale();
@@ -72,7 +72,9 @@ public class Swipe_Handler : MonoBehaviour {
 				}
 				isosurfaces.Enqueue(i);
 			}
-		}
+
+
+        */
 	}
 
 	private Vector3 convert(Vector2 position){

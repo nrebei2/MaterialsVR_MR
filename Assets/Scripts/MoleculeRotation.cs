@@ -11,7 +11,8 @@ public class MoleculeRotation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        GameObject []myMolecule = GameObject.FindGameObjectsWithTag("mc"); 
+
+        GameObject[] myMolecule = GameObject.FindGameObjectsWithTag("mc"); 
         foreach (GameObject i in myMolecule) 
             i.transform.Rotate(Vector3.down * Time.deltaTime * 10.0f);
 	}

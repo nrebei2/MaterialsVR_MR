@@ -40,8 +40,8 @@ public class Movement_Handler : MonoBehaviour, IPointerClickHandler
         { // not able to move
           // remove old Sphere Collider
             Debug.Log("1");
-            List<GameObject> l = new List<Transform>(molecule.transform.GetComponentsInChildren<Transform>()).ConvertAll<GameObject>(delegate (Transform p_it) { return p_it.gameObject; });
-            foreach (GameObject i in l)
+            MeshRenderer[] objects = molecule.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer i in objects)
             {
                 GameObject atom = i.gameObject;
                 Destroy(atom.GetComponent<SphereCollider>());
@@ -72,8 +72,8 @@ public class Movement_Handler : MonoBehaviour, IPointerClickHandler
             Destroy(molecule.GetComponent<HandDraggable>());
             Destroy(molecule.GetComponent<RotatableObject>());
             // add Sphere Collider 
-            List<GameObject> l = new List<Transform>(molecule.transform.GetComponentsInChildren<Transform>()).ConvertAll<GameObject>(delegate (Transform p_it) { return p_it.gameObject; });
-            foreach (GameObject i in l)
+            MeshRenderer[] objects = molecule.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer i in objects)
             {
                 GameObject atom = i.gameObject;
                 if (atom.ToString().Contains(keyword))

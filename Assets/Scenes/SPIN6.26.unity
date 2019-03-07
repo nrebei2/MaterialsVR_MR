@@ -3028,7 +3028,6 @@ GameObject:
   - component: {fileID: 707927470}
   - component: {fileID: 707927474}
   - component: {fileID: 707927473}
-  - component: {fileID: 707927472}
   - component: {fileID: 707927471}
   m_Layer: 5
   m_Name: Menu_Canvas
@@ -3068,22 +3067,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 707927474}
---- !u!114 &707927472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 707927469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
-  blockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &707927473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4044,7 +4027,6 @@ GameObject:
   - component: {fileID: 913058221}
   - component: {fileID: 913058220}
   - component: {fileID: 913058219}
-  - component: {fileID: 913058218}
   - component: {fileID: 913058217}
   m_Layer: 5
   m_Name: Operation_Canvas
@@ -4065,22 +4047,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 913058220}
---- !u!114 &913058218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 913058216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
-  blockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &913058219
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class AddButtons : MonoBehaviour {
 
     IEnumerator Start()
     {
-        uiManager = GameObject.Find("UIManager MR").GetComponent<UIManager>();
+        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
         // wait ReadManifest finish and update the count
         // better way: Setting isPlaying delays the result until after all script code has completed for this frame
         yield return uiManager.count;
@@ -32,7 +32,7 @@ public class AddButtons : MonoBehaviour {
 
         moveButtonDown = new Vector3(225.7f, 25.08f, -247.1f);
 
-        
+        yield return new WaitForSeconds(0.2f);
         for (int i = 0; i < uiManager.count; i++)
         {
             Debug.Log("Instantiated Button");
